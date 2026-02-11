@@ -71,7 +71,9 @@ public class Patrol : MonoBehaviour
         float disti = Vector3.Distance(transform.position, player.position);
         bool pelaajaRangessa = disti <= AlertRange;
 
-        if (pelaajaRangessa)
+        bool visible = pelaajaRangessa && LineOfSight();
+
+        if (visible)
         {
             AlertLevel += AlertGainSekunnit * Time.deltaTime;
         }
@@ -101,6 +103,26 @@ public class Patrol : MonoBehaviour
         }
     }
 
+    private bool LineOfSight()
+    {
+        if (player == null) return false;
+
+        Vector2 Suunta = (player.position - transform.position).normalized;
+        float dist = Vector2.Distance(transform.position, player.position);
+
+        int mask = LayerMask.GetMask("Wall");
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Suunta, dist, mask);
+
+        if (hit.collider != null) return false;
+
+        return true;
+        
+          
+        
+
+        
+    }
 
 
 
@@ -118,6 +140,8 @@ public class Patrol : MonoBehaviour
 
 
         Transform wp = waypointit[wayPointIndexi];
+
+
 
 
 
