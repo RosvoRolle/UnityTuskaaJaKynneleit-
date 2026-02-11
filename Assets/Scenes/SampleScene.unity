@@ -802,6 +802,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4133625494480478218, guid: e33d8198303b0d9409069d285c905131, type: 3}
+      propertyPath: 'waypointit.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1164753224}
+    - target: {fileID: 4133625494480478218, guid: e33d8198303b0d9409069d285c905131, type: 3}
+      propertyPath: 'waypointit.Array.data[1]'
+      value: 
+      objectReference: {fileID: 1062457181}
+    - target: {fileID: 4133625494480478218, guid: e33d8198303b0d9409069d285c905131, type: 3}
+      propertyPath: 'waypointit.Array.data[2]'
+      value: 
+      objectReference: {fileID: 637803128}
+    - target: {fileID: 4133625494480478218, guid: e33d8198303b0d9409069d285c905131, type: 3}
+      propertyPath: 'waypointit.Array.data[3]'
+      value: 
+      objectReference: {fileID: 1784299249}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
